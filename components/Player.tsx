@@ -86,7 +86,7 @@ function Player() {
         onEnded={audioEnded}
         controls
       />
-      <p className="mt-5">All music from: www.bensound.com</p>
+      <p className="mt-5 text-center">All music from: www.bensound.com</p>
     </div>
   );
 }
