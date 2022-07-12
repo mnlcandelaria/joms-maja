@@ -1,86 +1,48 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
+import Player from "../components/Player";
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="relative h-screen  lg:h-[140vh]">
       <Head>
-        <title>Create Next App</title>
+        <title>Joms & Maja</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        <h1 className="text-6xl font-bold">
-          Welcome to{' '}
-          <a className="text-blue-600" href="https://nextjs.org">
-            Next.js!
-          </a>
-        </h1>
-
-        <p className="mt-3 text-2xl">
-          Get started by editing{' '}
-          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
-            pages/index.tsx
-          </code>
-        </p>
-
-        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
-          <a
-            href="https://nextjs.org/docs"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Find in-depth information about Next.js features and its API.
+      <main className="relative pb-24">
+        <div
+          className="relative bg-gradient-to-b 
+    from-gray-900/10 to-[#010511]  lg:pl-16 h-[65vh] md:h-[95vh]"
+        >
+          <div className="absolute top-0 -z-10 left-0 h-[65vh] md:h-[95vh] w-screen">
+            <Image
+              src={`https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/237037732_4904252662934866_7714880928040623700_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=0debeb&_nc_eui2=AeGb_g53iddCCEOiK9Zy5sLWFBI586Uvq9MUEjnzpS-r07zlj1rRxlah3WNJaDQ582rQQ35s77K805vQJzGyV7Di&_nc_ohc=aOUlDpOLEWoAX8fs_5k&_nc_ht=scontent.fmnl17-3.fna&oh=00_AT9JWgqoiEzKZQajW-OpDL19SLsIkTaSb3rDDPpI-VJTQA&oe=62D2102F`}
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+          <div className="absolute m-auto left-0 right-0 text-center bottom-5 md:bottom-20 max-w-xs lg:max-w-2xl">
+            <p className="font-Cormorant text-shadow-md text-white text-2xl lg:text-4xl md:text-3xl">
+              SAVE THE DATE
             </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Learn about Next.js in an interactive course with quizzes!
+            <p className="font-Caveat text-shadow-md text-white text-6xl lg:text-9xl md:text-7xl">
+              Joms & Maja
             </p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Discover and deploy boilerplate example Next.js projects.
+            <p className="font-Cormorant text-shadow-md text-white text-2xl lg:text-5xl md:text-4xl">
+              10.05.2022
             </p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
-          >
-            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
-            <p className="mt-4 text-xl">
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </div>
+        </div>
+        <div>
+          <Player />
         </div>
       </main>
 
-      <footer className="flex h-24 w-full items-center justify-center border-t">
-        <a
-          className="flex items-center justify-center gap-2"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-        </a>
-      </footer>
+      <footer className="flex h-24 w-full items-center justify-center"></footer>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
