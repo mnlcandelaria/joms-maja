@@ -35,7 +35,7 @@ const Home: NextPage = () => {
             </p>
           </div>
         </div>
-        <div>
+        <div className="flex justify-center">
           <Player />
         </div>
       </main>

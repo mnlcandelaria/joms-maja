@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ReactAudioPlayer from "react-audio-player";
 
 function Player() {
-  const [track, setTrack] = useState(14);
+  const [track, setTrack] = useState(0);
   const musicTracks = [
     {
       name: "Memories",
@@ -67,17 +67,17 @@ function Player() {
   ];
 
   const audioEnded = () => {
-    if (track < musicTracks.length - 1) {
-      setTrack((prev) => prev + 1);
-    } else {
-      setTrack(0);
-    }
+    setTrack(Math.floor(Math.random() * 15));
   };
+
+  useEffect(() => {
+    setTrack(Math.floor(Math.random() * 15));
+  }, []);
 
   return (
     <div className="p-5 md:p-10">
-      <p className="ml-5">
-        <span className="text-gray-500">Now Playing:</span>{" "}
+      <p className="text-center">
+        <span className="text-gray-500">Now Playing [{track}]: </span>{" "}
         <span className="font-bold">{musicTracks[track].name}</span>
       </p>
       <ReactAudioPlayer
