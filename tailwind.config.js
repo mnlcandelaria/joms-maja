@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        Cormorant: ["Cormorant SC;", "serif"],
+        Cormorant: ["Cormorant SC", "serif"],
         Caveat: ["Caveat", "cursive"],
       },
       backgroundImage: {
