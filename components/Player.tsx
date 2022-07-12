@@ -76,7 +76,7 @@ function Player() {
 
   return (
     <div className="p-5 md:p-10">
-      <p className="text-center">
+      <p className="text-center mb-5">
         <span className="text-gray-500">Now Playing [{track}]: </span>{" "}
         <span className="font-bold">{musicTracks[track].name}</span>
       </p>
