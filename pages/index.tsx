@@ -9,6 +9,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Joms & Maja</title>
         <link rel="icon" href="/favicon.ico" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300&display=swap"
+          rel="stylesheet"
+        ></link>
       </Head>
 
       <main className="relative pb-24">
@@ -24,13 +28,13 @@ const Home: NextPage = () => {
             />
           </div>
           <div className="absolute m-auto left-0 right-0 text-center bottom-5 md:bottom-20 max-w-xs lg:max-w-2xl">
-            <p className="text-white text-2xl lg:text-4xl md:text-3xl">
+            <p className="font-Cormorant text-white text-2xl lg:text-4xl md:text-3xl">
               SAVE THE DATE
             </p>
             <p className="text-white text-6xl lg:text-9xl md:text-7xl">
               Joms & Maja
             </p>
-            <p className="text-white text-2xl lg:text-5xl md:text-4xl">
+            <p className="font-Cormorant text-white text-2xl lg:text-5xl md:text-4xl">
               10.05.2022
             </p>
           </div>
